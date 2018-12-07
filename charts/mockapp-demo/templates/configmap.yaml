@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }} 
+  labels:
+    name: {{ .Chart.Name }}
+  namespace: default
+data:
+  PG_HOST: {{ .Values.global.PG_HOST }}
+  PG_PORT: '{{ .Values.global.PG_PORT }}'
+  PG_DB: {{ .Values.global.PG_DB }}
+  PG_USER: {{ .Values.global.PG_USER }}
+  REDIS_HOST: {{ .Values.global.REDIS_HOST }}
+  REDIS_HOST2: {{ .Values.global.REDIS_HOST2 }}
+  REDIS_PORT: '{{ .Values.global.REDIS_PORT }}'
+  REDIS_PORT2: '{{ .Values.global.REDIS_PORT2 }}'

@@ -10,7 +10,7 @@ service:
   name: mockapp-demo
   type: ClusterIP
   externalPort: 80
-  internalPort: 8080
+  internalPort: 5000
   annotations:
     fabric8.io/expose: "true"
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
@@ -23,3 +23,14 @@ resources:
     memory: 128Mi
 ingress:
   enabled: false
+global:
+  PG_HOST: demodb-postgresql
+  PG_PORT: 5432
+  PG_DB: my-database
+  PG_USER: username
+  REDIS_HOST: democache-redis-master
+  REDIS_HOST2: democache2-redis-master
+  REDIS_PORT: 6380
+  REDIS_PORT2: 6379
+  PG_PASS: c2VjcmV0cGFzc3dvcmQ=
+  RD_PASS: aDFMRk5yOVFtaQ==
