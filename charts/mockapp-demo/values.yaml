@@ -23,7 +23,7 @@ resources:
     memory: 128Mi
 ingress:
   enabled: false
-global:
+data:
   pg_host: demodb-postgresql
   pg_port: 5432
   pg_db: my-database
